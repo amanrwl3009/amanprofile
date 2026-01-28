@@ -84,7 +84,7 @@ const Contact = () => {
                     <div className="h-10 w-10 rounded-2xl border border-white/10 bg-black/30 flex items-center justify-center">
                       <Phone size={18} className="text-green-400" />
                     </div>
-                    <span className="text-sm md:text-base">+91-99999-99999</span>
+                    <span className="text-sm md:text-base">+91 9350120019</span>
                   </div>
 
                   <div className="flex items-center gap-3">
@@ -100,7 +100,7 @@ const Contact = () => {
                     <div className="h-10 w-10 rounded-2xl border border-white/10 bg-black/30 flex items-center justify-center">
                       <MapPin size={18} className="text-green-400" />
                     </div>
-                    <span className="text-sm md:text-base">Delhi NCR</span>
+                    <span className="text-sm md:text-base"> Panipat Haryana </span>
                   </div>
                 </div>
 
@@ -112,7 +112,7 @@ const Contact = () => {
 
                   <div className="mt-3 flex gap-3">
                     <a
-                      href="https://instagram.com/yourprofile"
+                      href="https://www.instagram.com/aman_rwl_"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="h-11 w-11 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white/70 hover:text-white hover:border-green-400/30 hover:bg-white/10 transition"
