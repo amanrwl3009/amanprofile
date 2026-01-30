@@ -20,7 +20,7 @@ const About = () => {
   const cards = [
     {
       tag: "WHAT I DO",
-      title: "End-to-End   Testing",
+      title: "End-to-End Testing",
       desc: "I test core flows, edge cases, and release stability before production.",
     },
     {
@@ -50,14 +50,13 @@ const About = () => {
         }}
       />
 
-      {/* GREEN hero-like glows */}
+      {/* Background glows */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-44 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-green-400/12 blur-3xl" />
         <div className="absolute top-1/3 -left-36 h-[460px] w-[460px] rounded-full bg-lime-400/10 blur-3xl" />
         <div className="absolute bottom-[-220px] -right-44 h-[620px] w-[620px] rounded-full bg-emerald-400/10 blur-3xl" />
       </div>
 
-      {/* Content */}
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-10 relative z-10">
         <motion.div
           initial="hidden"
@@ -65,7 +64,6 @@ const About = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="w-full"
         >
-          {/* label */}
           <motion.p
             variants={fadeUp}
             className="text-white/40 text-xs tracking-[0.35em] uppercase flex items-center gap-3"
@@ -77,47 +75,45 @@ const About = () => {
           <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* LEFT */}
             <motion.div variants={fadeLeft} className="lg:col-span-7">
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
-            <span className="block space-y-1 md:space-y-0 leading-none">
-            <span className="block">
-            QA Engineer <span className="text-white/55">at</span>
-           </span>
-
-            <span className="block text-white">Techwits IT Solutions</span>
-
-          <span className="block text-white/55 text-3xl md:text-5xl">
-             a DPIIT-approved company.
-         </span>
-          </span>
-        </h2>
-
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
+                <span className="block leading-none">
+                  <span className="block">
+                    QA Engineer <span className="text-white/55">at</span>
+                  </span>
+                  <span className="block text-white">Techwits IT Solutions</span>
+                  <span className="block text-white/55 text-3xl md:text-5xl">
+                    a DPIIT-approved company.
+                  </span>
+                </span>
+              </h2>
 
               <p className="mt-6 text-white/65 text-lg leading-relaxed max-w-2xl">
-                I’m Aman Rawal — a QA Engineer at Techwits IT Solutions (DPIIT-approved)
-                 with 6 months of experience testing live web and mobile products.
-                  I’ve supported 35+ releases across Android, iOS, Web, and Admin portals, 
-                  focusing on smoke/regression testing, UI/UX validation, API testing (Postman),
-                   and clear defect tracking in Asana.
+                I’m Aman Rawal, a QA Engineer at Techwits IT Solutions with 6 months
+                of experience testing live web and mobile products. I’ve supported
+                35+ releases across Android, iOS, Web, and Admin portals, focusing
+                on smoke/regression testing, UI/UX validation, API testing
+                (Postman), and defect tracking in Asana.
               </p>
 
               <p className="mt-4 text-white/50 leading-relaxed max-w-2xl">
-                I write test cases, execute regression cycles, and ensure critical user
-                flows work perfectly before production.
+                I write test cases, execute regression cycles, and ensure critical
+                user flows work perfectly before production.
               </p>
 
-              {/* Buttons */}
-              <div className="mt-9 flex flex-wrap gap-3">
-                <a href="#work" className="btn-uiverse btn-uiverse--primary">
-                  <span>View Work</span>
-                </a>
-
-                <a
-                  href="#contact"
-                  className="group inline-flex items-center justify-center min-w-[220px] px-7 py-[15px] rounded-2xl border border-white/12 bg-white/5 text-white font-extrabold text-[14px] uppercase tracking-[0.09em] backdrop-blur-xl hover:bg-white/10 transition"
-                >
-                  Contact
-                </a>
-              </div>
+              {/* Buttons REMOVED safely */}
+              {false && (
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <a href="#work" className="btn-uiverse btn-uiverse--primary">
+                    <span>View Work</span>
+                  </a>
+                  <a
+                    href="#contact"
+                    className="group inline-flex items-center justify-center min-w-[220px] px-7 py-[15px] rounded-2xl border border-white/12 bg-white/5 text-white font-extrabold text-[14px] uppercase tracking-[0.09em] backdrop-blur-xl hover:bg-white/10 transition"
+                  >
+                    Contact
+                  </a>
+                </div>
+              )}
             </motion.div>
 
             {/* RIGHT */}
@@ -135,15 +131,12 @@ const About = () => {
                     <p className="text-white/35 text-[11px] tracking-[0.22em] uppercase">
                       {c.tag}
                     </p>
-
                     <p className="mt-2 text-white text-base font-semibold">
                       {c.title}
                     </p>
-
                     <p className="mt-2 text-white/55 text-sm leading-relaxed">
                       {c.desc}
                     </p>
-
                     <div className="mt-4 h-[2px] w-14 bg-gradient-to-r from-green-400/70 to-transparent" />
                   </motion.div>
                 ))}

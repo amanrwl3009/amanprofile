@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ================================
-   Global Reset
+   Base Reset & Defaults
    ================================ */
 
 * {
@@ -29,7 +29,7 @@ body {
   color: #ffffff;
 }
 
-/* Root should take full height */
+/* App root layout */
 #root {
   max-width: 100%;
   min-height: 100%;
@@ -38,13 +38,13 @@ body {
   text-align: left;
 }
 
-/* Fix: when clicking navbar links, section shouldn't hide behind navbar */
+/* Offset scroll position for fixed header */
 section {
-  scroll-margin-top: 90px; /* adjust if your navbar height is different */
+  scroll-margin-top: 90px;
 }
 
 /* ================================
-   Typography
+   Typography System
    ================================ */
 
 h1,
@@ -85,13 +85,13 @@ textarea {
 }
 
 /* ================================
-   Theme Variables (Green)
+   Theme Variables (Green Accent)
    ================================ */
 
 :root {
-  --green-main: rgba(34, 197, 94, 0.95); /* green-500 */
-  --green-soft: rgba(74, 222, 128, 0.95); /* green-400 */
-  --lime-soft: rgba(163, 230, 53, 0.65); /* lime-400 */
+  --green-main: rgba(34, 197, 94, 0.95);
+  --green-soft: rgba(74, 222, 128, 0.95);
+  --lime-soft: rgba(163, 230, 53, 0.65);
 
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.12);
@@ -101,7 +101,7 @@ textarea {
 }
 
 /* ================================
-   Premium Hero Buttons (Green)
+   Primary Action Button Styles
    ================================ */
 
 .btn-uiverse {
@@ -134,22 +134,25 @@ textarea {
     border-color 0.25s ease;
 }
 
+/* Hover interaction */
 .btn-uiverse:hover {
   transform: translateY(-2px);
   border-color: rgba(74, 222, 128, 0.95);
   box-shadow: 0 28px 85px rgba(0, 0, 0, 0.75);
 }
 
+/* Pressed state */
 .btn-uiverse:active {
   transform: translateY(0px) scale(0.98);
 }
 
+/* Button content layer */
 .btn-uiverse span {
   position: relative;
   z-index: 3;
 }
 
-/* Vibrant glow base */
+/* Background glow layer */
 .btn-uiverse::before {
   content: "";
   position: absolute;
@@ -177,11 +180,12 @@ textarea {
   transition: opacity 0.25s ease;
 }
 
+/* Glow intensity on hover */
 .btn-uiverse:hover::before {
   opacity: 1;
 }
 
-/* Shine sweep */
+/* Shine animation overlay */
 .btn-uiverse::after {
   content: "";
   position: absolute;
@@ -200,13 +204,14 @@ textarea {
   opacity: 0;
 }
 
+/* Trigger shine on hover */
 .btn-uiverse:hover::after {
   transform: translateX(140%);
   opacity: 1;
   transition: transform 0.9s ease, opacity 0.2s ease;
 }
 
-/* All buttons same style */
+/* Shared variants */
 .btn-uiverse--primary,
 .btn-uiverse--glass,
 .btn-uiverse--outline {
@@ -214,8 +219,7 @@ textarea {
 }
 
 /* ================================
-   Optional: Premium Glass Card Helpers
-   (use if needed later)
+   Glass Card Utility (Optional)
    ================================ */
 
 .glass-card {
@@ -225,6 +229,31 @@ textarea {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
+/* Hover highlight */
 .glass-card:hover {
   border-color: rgba(74, 222, 128, 0.35);
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* your existing styles here */
+
+
+/* ============================= */
+/* Chrome Autofill Dark Fix 🔥 */
+/* ============================= */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  transition: background-color 9999s ease-in-out 0s;
 }
